@@ -16,7 +16,7 @@ export const Services = () => {
                 <p className='text-sm md:mx-8'>My experience encompasses aspects such as layout design, color theory and user interaction, enabling me to craft UIs that are both functional and aesthetically pleasing. I'm committed to staying updated with the latest design trends and technologies to deliver high-quality results consistently.</p>
               <div className='mt-4 mx-8'>
               <button className='bg-[#DAA520] sm:p-2 sm:text-sm p-2 rounded-lg shadow-lg text-white text-sm hover:bg-white hover:text-[#DAA520] focus:outline-none focus:ring focus:ring-[#DAA520] focus:ring-opacity-50 mb-2 sm:mb-0'>
-                    <a href='https://github.com/tsega7664'>Visit My Github</a> 
+                    <a href='https://github.com/tsega7659'>Visit My Github</a> 
                   </button>
               </div>
               </div> 
@@ -34,7 +34,7 @@ export const Services = () => {
                 <p className='text-sm md:mx-8'>I have extensive experience as a front-end developer for a federal prison, where I honed my skills in designing user-friendly and responsive UIs. Through this role, I developed strong communication and customer service abilities, ensuring effective collaboration and support throughout projects.</p>
               <div className='mt-4 mx-8  flex justify-end'>
               <button className=' bg-[#DAA520] sm:p-2 sm:text-sm p-2 rounded-lg shadow-lg text-white  text-sm hover:bg-white hover:text-[#DAA520] focus:outline-none focus:ring focus:ring-[#DAA520] focus:ring-opacity-50 mb-2 sm:mb-0'>
-                    <a href='https://github.com/tsega7664'>Visit My Project</a> 
+                    <a href='https://github.com/tsega7659'>Visit My Project</a> 
                   </button>
               </div>
               </div> 

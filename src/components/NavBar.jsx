@@ -5,7 +5,7 @@ import {AiOutlineHome, AiOutlineMenu,AiOutlineProject,AiOutlineMail} from "react
 import {GrProjects} from "react-icons/gr";
 import {BsPerson} from "react-icons/bs";
 import image from "../assets/me.png"
-import Yeabsira_resume from "../assets/Yeabsira's_resume.pdf"
+import Yeabsira_resume from "../assets/CV Resume.pdf"
 export const NavBar = () => {
   const [nav, setNav] = useState(false);
 
@@ -94,7 +94,7 @@ export const NavBar = () => {
           <a href="https://t.me/y_a_b_u_Z" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
             <FaTelegram size={24} className='text-[#DAA520]'/>
           </a>
-          <a href="https://github.com/tsega7664" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
+          <a href="https://github.com/tsega7659" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
             <FaGithub size={24} className='text-[#DAA520]' />
           </a>
           <a href="https://www.linkedin.com/in/yeabsira-zelalem-8455052ab/" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
