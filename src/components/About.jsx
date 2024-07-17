@@ -10,7 +10,7 @@ export const About = () => {
 
       <div className='items-center text-center justify-center md:mt-24 mt-4 py-8 '>
         <h1 className='text-4xl '>About me</h1>
-        <p className='py-4  sm:mx-44  flex sm:text-left  text-center'>Hello, my name is Yeabsira Zelalem. I'm a software engineering student and a front-end developer. I have hands-on experience working on various projects, focusing on creating responsive pages loaded with functionality.</p>
+        <p className='py-4 px-4 sm:mx-44  flex sm:text-left  text-center '>Hello, my name is Yeabsira Zelalem. I'm a software engineering student and a front-end developer. I have hands-on experience working on various projects, focusing on creating responsive pages loaded with functionality.</p>
       </div>
       </div>
   
