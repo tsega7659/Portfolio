@@ -19,14 +19,14 @@ const Projects = ()=>{
                 <p className="py-2 text-customBlue3 ">Tailwind,Bootstrap, HTML,CSS</p>
                </div>
                <div className="shadow-lg rounded-lg  bg-white text-center mx-4 lg:mt-0 mb-8 lg:mb-0  px-8  transform transition-transform duration-300 hover:translate-y-2">
-                 <img className="w-24 mx-28 mt-4 " src={dev} />
+                 <img className="w-24 lg:mx-16 mx-28 mt-4 " src={dev} />
                <h2 className="mt-4 ml-4 text-center font-bold text-customBlue4  ">Web Developmnet</h2>
                <p className="py-2 text-customBlue3 ">Full-Stack Developer  in developing cutting-edge solutions. Skilled in front-end  development.</p>
-                <p className=" text-customBlue3 ">PHP, Node.js, Express.js, MYSql</p>
+                <p className="pb-4 text-customBlue3 ">PHP, Node.js, Express.js, MYSql</p>
                </div>
                <div>
                <div className="shadow-lg rounded-lg mx-4 bg-white text-center  lg:py-8 px-4 mt-4 lg:mt-0  transform transition-transform duration-300 hover:-translate-y-2 ">
-                <img className="w-24  mx-32   pt-4" src={tutor} />
+                <img className="w-24  lg:mx-20  mx-32  pt-4" src={tutor} />
                 <h2 className="  text-center font-bold text-customBlue4 mt-2  ">Tutoring</h2>
                 <p className="py-6 text-customBlue3 ">Tutoring enables me to share my expertise and passion for learning while helping students reach their academic goals.</p>
                 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaTelegram, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import Yeabsira_resume from "../assets/CV Resume.pdf"
+import Yeabsira_resume from "../assets/CVResume.pdf"
 export const NavBar = () => {
   const [nav, setNav] = useState(false);
 
