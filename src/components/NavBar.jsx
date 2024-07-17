@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaTelegram, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import {AiOutlineHome, AiOutlineMenu,AiOutlineProject,AiOutlineMail} from "react-icons/ai"
-import {GrProjects} from "react-icons/gr";
-import {BsPerson} from "react-icons/bs";
-import image from "../assets/me.png"
 import Yeabsira_resume from "../assets/CV Resume.pdf"
 export const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -20,46 +16,18 @@ export const NavBar = () => {
     link.click(); 
   };
   return (
-    <div className='flex flex-col w-full h-screen bg-gradient-to-r from-gray-200 to-[#DAA520]'>
-        <div>
-           <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99] md:hidden' />
-                {nav ? <div onClick={handleNav}
-                className="fixed w-full h-screen flex flex-col justify-center items-center  z-20 bg-white/90">
-                   
-                <a href="#main" className="w-[50%]   flex  text-[#DAA520] rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:bg-[#DAA520] hover:text-white">
-                <AiOutlineHome size={20} />
-                <span className="pl-4">Home</span>
-                </a>
-                <a href="#about" onClick={handleNav}  className="w-[50%]  text-[#DAA520] flex  rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:bg-[#DAA520] hover:text-white">
-                <GrProjects size={20} />
-                <span className="pl-4">About</span>
-                </a>
-                <a href="#skill" onClick={handleNav}  className="w-[50%]  text-[#DAA520] flex  rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:bg-[#DAA520] hover:text-white">
-                <AiOutlineProject size={20} />
-                <span className="pl-4">Skills</span>
-                </a>
-                <a href="#projects" onClick={handleNav}  className="w-[50%]  text-[#DAA520] flex  rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:bg-[#DAA520] hover:text-white">
-                <BsPerson size={20} />
-                <span className="pl-4">Services</span>
-                </a>
-                <a href="#contact" onClick={handleNav}  className="w-[50%] text-[#DAA520] flex  rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 hover:bg-[#DAA520] hover:text-white">
-                <AiOutlineMail size={20} />
-                <span className="pl-4">Contact Me</span>
-                </a>
+    <div className='font-roboto bg-customBlue text-white w-full'>
+      <div className='flex justify-around '>
+        <div className='font-bold lg:text-2xl text-lg mt-8 lg:mx-16'><h1>PORTFOLIO</h1></div>
+         <div className='mt-8 lg:mx-16 mb-3 '>
+            <button onClick={handleDownload}  className="bg-customBlue text-white border-2 border-customTeal rounded-full lg:py-2 py-1 lg:px-6 px-3 hover:bg-customBlue1 hover:text-customBlue transition duration-300">
+             Download CV
+            </button>
         </div>
-        :
-        ''//empty
-      }
-        </div>
-    <div className='flex flex-row'>
-      
-      <div className='bg-gray-100 w-full h-screen items-center'>
-        <div className='items-center m-16'>
-          <h2 className='sm:text-3xl font-bold text-shadow-lg'>Portfolio.</h2>
-        </div>
-        <div className='md:pl-32 pl-16'>
-          <h1 className='text-2xl sm:text-6xl font-bold text-shadow-lg'>I'm Yeabsira Zelalem</h1>
-          <h2 className="flex text-sm pt-4 pl-2 sm:pl-16 text-gray-800 sm:text-2xl"> A  <TypeAnimation className='text-[#DAA520]'
+      </div>
+    
+      <div className='justify-center text-center lg:text-4xl text-sm'>
+          <h1 className='   lg:ml-[450px] ml-4 font-bold flex mt-8 '>I'm Yeabsira Zelalem a   <TypeAnimation className='text-customBlue1'
             sequence={[
               'Software Engineer',
               2000, 
@@ -75,51 +43,24 @@ export const NavBar = () => {
             style={{ fontSize: '1em', paddingLeft:'5px' }}
             repeat={Infinity}
           />
-          </h2>
-        </div>
-       <div className='flex flex-col sm:flex-row mx-24 mt-8'>
-    <a href='mailto:yeabsirazelalem791@gmail.com' className='hover:bg-white sm:text-sm px-8 py-2 w-full sm:w-auto rounded-lg shadow-lg hover:text-[#DAA520] text-sm bg-[#DAA520] text-white focus:outline-none focus:ring focus:ring-[#DAA520] focus:ring-opacity-50 mb-2 sm:mb-0'>
-        Hire Me
-    </a>
-    <button onClick={handleDownload} className="text-[#DAA520] md:mx-16 shadow-lg mt-2 py-3 px-2 w-full  text-sm sm:w-auto rounded-lg hover:text-white hover:bg-[#DAA520] hover:font-bold">
-        Download My CV
-    </button>
-</div>
-
-
-
-
-
-        <div className="flex justify-center mt-44">
+          </h1>
+          <div className="flex justify-center mt-12  p-4">
           <a href="https://t.me/y_a_b_u_Z" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
-            <FaTelegram size={24} className='text-[#DAA520]'/>
+            <FaTelegram size={32} className='text-customBlue1  hover:text-customTeal transition duration-300'/>
           </a>
           <a href="https://github.com/tsega7659" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
-            <FaGithub size={24} className='text-[#DAA520]' />
+            <FaGithub size={32} className='text-customBlue1  hover:text-customTeal transition duration-300' />
           </a>
           <a href="https://www.linkedin.com/in/yeabsira-zelalem-8455052ab/" target="_blank" rel="noopener noreferrer" className="mx-2 px-4 ">
-            <FaLinkedin size={24} className='text-[#DAA520]' />
+            <FaLinkedin size={32} className='text-customBlue1  hover:text-customTeal transition duration-300' />
           </a>
           <a href="mailto:yeabsirazelalem791@gmail.com" className="mx-2 px-4 ">
-            <FaEnvelope size={24} className='text-[#DAA520]' />
+            <FaEnvelope size={32} className='text-customBlue1  hover:text-customTeal transition duration-300' />
           </a>
         </div>
-      </div>
-      <div className='flex flex-col '>
-        
-        <div className='text-white  justify-evenly  ml-24 max-md:hidden mt-4'>
-          <a href='' className='font-bold hover:border-2 border-white rounded-lg mx-8 p-2 '>Home</a>
-          <a href='#about' className='font-bold hover:border-2 border-white rounded-lg mx-8 p-2'>About</a>
-          <a href='#skill' className='font-bold hover:border-2 border-white rounded-lg mx-8 p-2'>Skills</a>
-          <a href='#projects' className='font-bold hover:border-2 border-white rounded-lg mx-8 p-2'>Experience</a>
-          <a href='#contact' className='font-bold hover:border-2 border-white rounded-lg mx-8 p-2'>ContactMe</a>
-       
-        </div> 
-        <div className='m-32 mt-32 max-md:hidden flex items-center rounded-full overflow-hidden'>
-          <img className="w-96 h-96  rounded-full border-8 border-white   border-hidden " src={image} alt="Girl" />
+        <hr class="border-t-4 border-customTeal w-64 mx-auto  mt-12" />
         </div>
-      </div>
-    </div>
+      
     </div>
   )
 }

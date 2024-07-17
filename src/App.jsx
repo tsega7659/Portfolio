@@ -6,7 +6,7 @@ import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
 export default function App() {
   return (
-    <div>
+    <div className="bg-customBlue">
       <NavBar />
       <About />
       <Projects />
