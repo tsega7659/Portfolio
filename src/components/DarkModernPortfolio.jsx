@@ -242,7 +242,7 @@ const DarkModernPortfolio = () => {
                   Hello, I'm Yeabsira!
                 </h3>
                 <p className="text-lg mb-4 text-gray-300">
-                  I'm a passionate software engineering student and full-stack developer based in Ethiopia. With a strong
+                  I'm a passionate software engineering student and front-end developer based in Ethiopia. With a strong
                   foundation in web technologies and a keen eye for design, I create responsive and user-friendly web
                   applications that leave a lasting impression.
                 </p>
