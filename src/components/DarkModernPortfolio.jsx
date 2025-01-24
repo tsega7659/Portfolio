@@ -1,62 +1,60 @@
-import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes, FaTelegram, FaPhone, FaMapMarkerAlt } from "react-icons/fa"
-import me from "../assets/me.png"
-import ritta from "../assets/rita.jpg"
-import tsimona from "../assets/tsimona.jpg"
-import kefta from "../assets/kefta.jpg"
-import planning from "../assets/planner.jpg"
-
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes, FaTelegram, FaPhone, FaMapMarkerAlt, FaDownload } from "react-icons/fa";
+import me from "../assets/me1.jpg";
+import ritta from "../assets/rita.jpg";
+import tsimona from "../assets/tsimona.jpg";
+import kefta from "../assets/kefta.jpg";
+import planning from "../assets/planner.jpg";
+import cv from "../assets/CVResume.pdf";
 
 const DarkModernPortfolio = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "skills", "contact"]
-      const scrollPosition = window.scrollY
+      const sections = ["home", "about", "projects", "skills", "contact"];
+      const scrollPosition = window.scrollY;
 
       for (const section of sections) {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const { offsetTop, offsetHeight } = element
+          const { offsetTop, offsetHeight } = element;
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
+            setActiveSection(section);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    // Here you would typically send the form data to a server
-    console.log("Form submitted:", formData)
-    // Reset form after submission
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    alert("Thank you for your message! I'll get back to you soon.")
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", subject: "", message: "" });
+    alert("Thank you for your message! I'll get back to you soon.");
+  };
 
   const navItems = [
     { id: "home", label: "Home" },
@@ -64,7 +62,61 @@ const DarkModernPortfolio = () => {
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
     { id: "contact", label: "Contact" },
-  ]
+  ];
+
+  const projects = [
+    {
+      title: "Ritta Flowers",
+      description: "A React and Tailwind CSS website showcasing a flower shop's products and services.",
+      image: ritta,
+      link: "https://ritta-flowers.netlify.app/",
+      github: "https://github.com/tsega7659/Ritta_Flowers_React_Excersice",
+      languages: ["React", "Tailwind CSS"],
+    },
+    {
+      title: "Tsimona Books",
+      description: "An online bookstore built with React, featuring API integration and responsive design.",
+      image: tsimona,
+      link: "https://tsimonabooks.netlify.app/",
+      github: "https://github.com/tsega7659/BOOK_RENTING",
+      languages: ["React", "Tailwind CSS", "RESTful API"],
+    },
+    {
+      title: "Planning Management System",
+      description: "A comprehensive system for managing planning and reporting process. Not Deployed yet.",
+      image: planning,
+      link: "#",
+      github: "https://github.com/fitiha/aastu-planner",
+      languages: ["Next.js", "Tailwind CSS", "Go"],
+    },
+    {
+      title: "Kefta Plc Website",
+      description: "A full-stack blog application built with React, Node.js, Express, and MySQL. Not Deployed yet.",
+      image: kefta,
+      link: "#",
+      github: "https://github.com/Yohanamtesfaye/kefita-tech-website",
+      languages: ["Node.js", "Express", "MySQL", "React", "Tailwind CSS"],
+    },
+  ];
+
+  const skillSets = [
+    {
+      category: "Front-end",
+      skills: ["React.js", "JavaScript","Next JS", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
+    },
+    {
+      category: "Back-end",
+      skills: ["Node.js", "Express.js", "PHP", "MySQL"],
+    },
+    {
+      category: "Tools & Others",
+      skills: ["Git", "RESTful APIs", "Responsive Design", "UI/UX Principles"],
+    },
+    { 
+      category: "Volunteer", 
+      skills: ["Tutoring", "Mentoring", "AASTU Charity Club","Shecodes AASTU"] 
+    },
+  ];
 
   return (
     <div
@@ -142,7 +194,7 @@ const DarkModernPortfolio = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]"
             >
-              Software Engineer & Front-end Developer
+              Software Engineer & Full-stack Developer
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -169,6 +221,7 @@ const DarkModernPortfolio = () => {
             </motion.div>
           </div>
         </section>
+
         <section id="about" className="py-20">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099] glitter-shadow">
@@ -189,7 +242,7 @@ const DarkModernPortfolio = () => {
                   Hello, I'm Yeabsira!
                 </h3>
                 <p className="text-lg mb-4 text-gray-300">
-                  I'm a passionate software engineering student and front-end developer based in Ethiopia. With a strong
+                  I'm a passionate software engineering student and full-stack developer based in Ethiopia. With a strong
                   foundation in web technologies and a keen eye for design, I create responsive and user-friendly web
                   applications that leave a lasting impression.
                 </p>
@@ -213,10 +266,11 @@ const DarkModernPortfolio = () => {
                   </div>
                 </div>
                 <a
-                  href="/placeholder.svg"
-                  download="Yeabsira_resume.pdf"
+                  href={cv}
+                  download="Yeabsira_Zelalem_CV.pdf"
                   className="inline-block px-6 mt-2 py-3 border border-[#FF4D00] text-[#FF4D00] rounded-full hover:bg-gradient-to-r from-[#FF4D00] to-[#6B0099] hover:text-white transition-all duration-300 glitter-shadow"
                 >
+                  {/* <FaDownload className="inline-block mr-2" /> */}
                   Download CV
                 </a>
               </div>
@@ -230,36 +284,7 @@ const DarkModernPortfolio = () => {
               Featured Projects
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "Ritta Flowers",
-                  description: "A React and Tailwind CSS website showcasing a flower shop's products and services.",
-                  image: ritta,
-                  link: "https://ritta-flowers.netlify.app/",
-                  languages: ["React", "Tailwind CSS"],
-                },
-                {
-                  title: "Tsimona Books",
-                  description: "An online bookstore built with React, featuring API integration and responsive design.",
-                  image:tsimona,
-                  link: "https://tsimonabooks.netlify.app/",
-                  languages: ["React", "Tailwind CSS", "RESTful API"],
-                },
-                {
-                  title: "Plannig Management System",
-                  description: "A comprehensive system for managing planning and reporting process. Not Deployed yet.",
-                  image: planning,
-                  link: "#",
-                  languages: ["Next JS", "Tailwind CSS", "Go"],
-                },
-                {
-                  title: "Kefta Plc Website",
-                  description: "A full-stack blog application built with React, Node.js, Express, and MySql. Not Deployed yet.",
-                  image:kefta,
-                  link: "#",
-                  languages: ["Node.js", "Express", "MySql", "React", "Tailwind CSS" ],
-                },
-              ].map((project, index) => (
+              {projects.map((project, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
@@ -287,14 +312,24 @@ const DarkModernPortfolio = () => {
                         </span>
                       ))}
                     </div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 text-orange-300 hover:text-[#FF4D00] transition-colors duration-300"
-                    >
-                      View Project →
-                    </a>
+                    <div className="flex justify-between items-center">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-4 py-2 text-orange-300 hover:text-[#FF4D00] transition-colors duration-300"
+                      >
+                        View Project →
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-[#FF4D00] transition-colors duration-300"
+                      >
+                        <FaGithub size={24} />
+                      </a>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -308,18 +343,7 @@ const DarkModernPortfolio = () => {
               Skills & Expertise
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  category: "Front-end",
-                  skills: ["React.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
-                },
-                {
-                  category: "Tools & Others",
-                  skills: ["Git", "RESTful APIs", "Responsive Design", "UI/UX Principles"],
-                },
-                { category: "Volunteer", skills: ["Tutoring", "Mentoring"] },
-              
-              ].map((skillSet, index) => (
+              {skillSets.map((skillSet, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -50 }}
@@ -450,8 +474,7 @@ const DarkModernPortfolio = () => {
         </footer>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DarkModernPortfolio
-
+export default DarkModernPortfolio;
