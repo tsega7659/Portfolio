@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes, FaTelegram, FaPhone,
 import me from "../assets/me1.jpg";
 import ritta from "../assets/rita.jpg";
 import tsimona from "../assets/tsimona.jpg";
-import kefta from "../assets/kefta.jpg";
+import askal from "../assets/askal.jpg";
 import planning from "../assets/planner.jpg";
 import cv from "../assets/CVResume.pdf";
 
@@ -83,18 +83,18 @@ const DarkModernPortfolio = () => {
     },
     {
       title: "Planning Management System",
-      description: "A comprehensive system for managing planning and reporting process. Not Deployed yet.",
+      description: "A comprehensive system for managing planning and reporting process. ",
       image: planning,
       link: "#",
       github: "https://github.com/fitiha/aastu-planner",
       languages: ["Next.js", "Tailwind CSS", "Go"],
     },
     {
-      title: "Kefta Plc Website",
-      description: "A full-stack blog application built with React, Node.js, Express, and MySQL. Not Deployed yet.",
-      image: kefta,
-      link: "#",
-      github: "https://github.com/Yohanamtesfaye/kefita-tech-website",
+      title: "Askal Charity Website",
+      description: "A Charity website built with React, Node.js, Express, and MySQL. ",
+      image: askal,
+      link: "https://askal-charity-website.vercel.app/",
+      github: "https://github.com/Yohanamtesfaye/Askal-Charity-Website/",
       languages: ["Node.js", "Express", "MySQL", "React", "Tailwind CSS"],
     },
   ];
@@ -105,8 +105,8 @@ const DarkModernPortfolio = () => {
       skills: ["React.js", "JavaScript","Next JS", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
     },
     {
-      category: "Back-end",
-      skills: ["Node.js", "Express.js", "PHP", "MySQL"],
+      category: "Web Development",
+      skills: ["Node.js", "Express.js", "PHP", "MySQL","Rest API",],
     },
     {
       category: "Tools & Others",
@@ -194,7 +194,7 @@ const DarkModernPortfolio = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]"
             >
-              Software Engineer & Full-stack Developer
+              Software Engineer & Front-end Developer
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -221,24 +221,23 @@ const DarkModernPortfolio = () => {
             </motion.div>
           </div>
         </section>
-
-        <section id="about" className="py-20">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099] glitter-shadow">
+           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099] glitter-shadow">
               About Me
-            </h2>
+             </h2> 
+        <section id="about" className="py-0">
+          <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row  max-w-5xl mx-auto ">
-              <div className="w-full mb-8 md:mb-0 md:mr-32">
+              <div className="w-full rounded-full mb-8 md:mb-0 md:mr-32">
                 <div className="gradient-border rounded-full overflow-hidden glitter-shadow">
                   <img
                     src={me || "/placeholder.svg"}
                     alt="Yeabsira Zelalem"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-ful object-cover rounded-full"
                   />
                 </div>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-2xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]">
+                <h3 className="text-2xl mt-12 font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]">
                   Hello, I'm Yeabsira!
                 </h3>
                 <p className="text-lg mb-4 text-gray-300">
