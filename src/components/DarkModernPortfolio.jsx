@@ -6,7 +6,7 @@ import ritta from "../assets/rita.jpg";
 import tsimona from "../assets/tsimona.jpg";
 import askal from "../assets/askal.jpg";
 import planning from "../assets/planner.jpg";
-import cv from "../assets/CVResume.pdf";
+import cv from "../assets/Yeabsira_Zelalem_CV_Resume.pdf";
 
 const DarkModernPortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

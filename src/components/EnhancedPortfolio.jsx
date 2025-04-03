@@ -10,7 +10,7 @@ import {
   FaPhone,
   FaArrowUp,
 } from "react-icons/fa"
-import Yeabsira_resume from "../assets/CVResume.pdf"
+import Yeabsira_resume from "../assets/Yeabsira_Zelalem_CV_Resume.pdf"
 import image from "../assets/me.png"
 import image2 from "../assets/image2.jpg"
 import badge from "../assets/badge.jpg"
