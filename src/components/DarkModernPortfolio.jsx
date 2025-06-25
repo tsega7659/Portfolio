@@ -6,7 +6,9 @@ import ritta from "../assets/rita.jpg";
 import tsimona from "../assets/tsimona.jpg";
 import askal from "../assets/askal.jpg";
 import planning from "../assets/planner.jpg";
-import cv from "../assets/Yeabsira_Zelalem_CV_Resume.pdf";
+import school from  "../assets/schoolnet.jpg"; 
+import yeneta from "../assets/yeneta.jpg"; 
+import cv from "../assets/Yeabsira-Zelalem-Tilahun-Resume.pdf";
 
 const DarkModernPortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,16 +99,32 @@ const DarkModernPortfolio = () => {
       github: "https://github.com/Yohanamtesfaye/Askal-Charity-Website/",
       languages: ["Node.js", "Express", "MySQL", "React", "Tailwind CSS"],
     },
+     {
+      title: "SchoolNet Mobile App",
+      description: "A mobile application for SchoolNet, built with Flutter.",
+      image: school,
+      link: "https://drive.google.com/file/d/1ef0kfP_IH2bxnA_zfSfi1-96BxSKLWn4/view?usp=sharing",
+      github: "https://github.com/tsega7659/SchoolNet-Mobile",
+      languages: ["Dart","Flutter", "BLoC State Managment" ],
+    },
+    {
+      title: "Yeneta Kids Mobile App",
+      description: "A mobile application for Kids, built with Flutter.",
+      image: yeneta,
+      link: "https://drive.google.com/file/d/164C_D3TslrfmfXLPmuamLA1xwccl1DBG/view?usp=sharing",
+      github: "https://github.com/tsega7659/Yeneta",
+      languages: ["Dart","Flutter", "BLoC State Managment" ],
+    },
   ];
 
   const skillSets = [
     {
-      category: "Front-end",
-      skills: ["React.js", "JavaScript","Next JS", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
+      category: "Web Development",
+      skills: ["React.js", "JavaScript","Next JS", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap","Node.js", "Express.js", "PHP", "MySQL","Rest API",],
     },
     {
-      category: "Web Development",
-      skills: ["Node.js", "Express.js", "PHP", "MySQL","Rest API",],
+      category: "Mobile App Development",
+      skills: ["Dart", "Flutter", "BLoC", "Provider"],
     },
     {
       category: "Tools & Others",
