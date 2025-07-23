@@ -212,7 +212,7 @@ const DarkModernPortfolio = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]"
             >
-              Software Engineer & Front-end Developer
+              Software Engineer & Front-end and Mobile App Developer
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -259,14 +259,10 @@ const DarkModernPortfolio = () => {
                   Hello, I'm Yeabsira!
                 </h3>
                 <p className="text-lg mb-4 text-gray-300">
-                  I'm a passionate software engineering student and front-end developer based in Ethiopia. With a strong
-                  foundation in web technologies and a keen eye for design, I create responsive and user-friendly web
-                  applications that leave a lasting impression.
+                   A Front-End and Mobile App Developer.
                 </p>
                 <p className="text-lg mb-6 text-gray-300">
-                  My journey in tech has equipped me with expertise in React, Node.js, and modern web development
-                  practices. I'm constantly learning and exploring new technologies to stay at the forefront of web
-                  development.
+              I enjoy creating easy-to-use and beginner-friendly products that help my community by solving real-world problems. I'm comfortable working both independently and as part of a team. I'm always excited to grow my skills by collaborating with peers and learning from tech experts.
                 </p>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center gap-2">
