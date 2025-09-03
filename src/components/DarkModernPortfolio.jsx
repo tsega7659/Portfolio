@@ -53,14 +53,20 @@ const DarkModernPortfolio = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    alert("Thank you for your message! I'll get back to you soon.");
+    const to = "yeabsirazelalem791@gmail.com";
+    const subject = `${formData.subject || "New Message"} - From ${formData.name || "Portfolio Visitor"}`;
+    const bodyLines = [
+      formData.message || "",
+      "",
+      `From: ${formData.name || "Anonymous"} <${formData.email || "no-email-provided"}>`,
+    ];
+    const body = encodeURIComponent(bodyLines.join("\n"));
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = mailto;
   };
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
     { id: "contact", label: "Contact" },
@@ -68,12 +74,12 @@ const DarkModernPortfolio = () => {
 
   const projects = [
     {
-      title: "Ritta Flowers",
-      description: "A React and Tailwind CSS website showcasing a flower shop's products and services.",
-      image: ritta,
-      link: "https://ritta-flowers.netlify.app/",
-      github: "https://github.com/tsega7659/Ritta_Flowers_React_Excersice",
-      languages: ["React", "Tailwind CSS"],
+      title: "Askal Charity Website",
+      description: "A Charity website built with React, Node.js, Express, and MySQL. ",
+      image: askal,
+      link: "https://askal-charity-website.vercel.app/",
+      github: "https://github.com/Yohanamtesfaye/Askal-Charity-Website/",
+      languages: ["Node.js", "Express", "MySQL", "React", "Tailwind CSS"],
     },
     {
       title: "Tsimona Books",
@@ -92,13 +98,16 @@ const DarkModernPortfolio = () => {
       languages: ["Next.js", "Tailwind CSS", "Go"],
     },
     {
-      title: "Askal Charity Website",
-      description: "A Charity website built with React, Node.js, Express, and MySQL. ",
-      image: askal,
-      link: "https://askal-charity-website.vercel.app/",
-      github: "https://github.com/Yohanamtesfaye/Askal-Charity-Website/",
-      languages: ["Node.js", "Express", "MySQL", "React", "Tailwind CSS"],
+      title: "Ritta Flowers",
+      description: "A React and Tailwind CSS website showcasing a flower shop's products and services.",
+      image: ritta,
+      link: "https://ritta-flowers.netlify.app/",
+      github: "https://github.com/tsega7659/Ritta_Flowers_React_Excersice",
+      languages: ["React", "Tailwind CSS"],
     },
+   
+    
+   
      {
       title: "SchoolNet Mobile App",
       description: "A mobile application for SchoolNet, built with Flutter.",
@@ -139,16 +148,10 @@ const DarkModernPortfolio = () => {
   return (
     <div
       className="min-h-screen text-gray-100 font-sans"
-      style={{
-        backgroundImage:
-          "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/background.jpg-Te8LGQLJd2Xz5NpHab9xXbAukeN5W3.jpeg)",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        backgroundPosition: "center",
-      }}
+      
     >
       <div className="min-h-screen lg:h-auto bg-black/90 backdrop-blur-sm">
-        <nav className="fixed w-full z-10 bg-black/90 backdrop-blur-md">
+        <nav className="fixed w-full z-10 bg-black/90 backdrop-blur-md border-b-2  border-white/10">
           <div className="container mx-auto px-6 py-3 flex justify-between items-center">
             <a
               href="#home"
@@ -196,73 +199,59 @@ const DarkModernPortfolio = () => {
           )}
         </nav>
 
-        <section id="home" className="h-[60vh] flex items-center justify-center">
-          <div className="text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-bold mb-6 glitter-shadow"
-            >
-              Yeabsira Zelalem
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]"
-            >
-              Software Engineer & Front-end and Mobile App Developer
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex justify-center space-x-4"
-            >
-              {[
-                { href: "https://github.com/tsega7659", icon: FaGithub },
-                { href: "https://www.linkedin.com/in/yeabsira-zelalem-8455052ab/", icon: FaLinkedin },
-                { href: "mailto:yeabsirazelalem791@gmail.com", icon: FaEnvelope },
-                { href: "https://t.me/yeabsiraZelalem", icon: FaTelegram },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-[#FF4D00] transition-all duration-300 transform hover:scale-110"
-                >
-                  <social.icon size={24} className="glitter-shadow" />
-                </a>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-           <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099] glitter-shadow">
-              About Me
-             </h2> 
-        <section id="about" className="py-0">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row  max-w-5xl mx-auto ">
-              <div className="w-full rounded-full mb-8 md:mb-0 md:mr-32">
-                <div className="gradient-border rounded-full overflow-hidden glitter-shadow">
-                  <img
-                    src={me || "/placeholder.svg"}
-                    alt="Yeabsira Zelalem"
-                    className="w-full h-ful object-cover rounded-full"
-                  />
+        <section id="home" className="py-12 md:py-20 bg-black">
+          <div className="max-w-6xl mx-auto px-6 mt-6">
+            <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+              <div className="w-full md:w-1/2 flex flex-col items-center">
+                <div className="w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden border-4 p-1">
+                  <img src={me} alt="Yeabsira Zelalem" className="w-full h-full object-cover rounded-full" />
                 </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="flex justify-center space-x-4 mt-6"
+                >
+                  {[
+                    { href: "https://github.com/tsega7659", icon: FaGithub },
+                    { href: "https://www.linkedin.com/in/yeabsira-zelalem-8455052ab/", icon: FaLinkedin },
+                    { href: "mailto:yeabsirazelalem791@gmail.com", icon: FaEnvelope },
+                    { href: "https://t.me/yeabsiraZelalem", icon: FaTelegram },
+                  ].map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-[#FF4D00] transition-all duration-300 transform hover:scale-110"
+                    >
+                      <social.icon size={24} className="glitter-shadow" />
+                    </a>
+                  ))}
+                </motion.div>
               </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-2xl mt-12 font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]">
-                  Hello, I'm Yeabsira!
-                </h3>
-                <p className="text-lg mb-4 text-gray-300">
-                   A Front-End and Mobile App Developer.
-                </p>
+              <div className="w-full md:w-1/2 text-center md:text-left">
+                <motion.h1
+                  initial={{ opacity: 0, y: -30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-4xl md:text-5xl font-bold mb-4 glitter-shadow"
+                >
+                  Yeabsira Zelalem
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="text-xl md:text-2xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]"
+                >
+                 Front-end and Mobile App Developer
+                </motion.p>
+                
                 <p className="text-lg mb-6 text-gray-300">
-              I enjoy creating easy-to-use and beginner-friendly products that help my community by solving real-world problems. I'm comfortable working both independently and as part of a team. I'm always excited to grow my skills by collaborating with peers and learning from tech experts.
+                  I enjoy creating easy-to-use and beginner-friendly products that help my community by solving real-world problems.
+                  I'm comfortable working both independently and as part of a team. I'm always excited to grow my skills by collaborating
+                  with peers and learning from tech experts.
                 </p>
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center gap-2">
@@ -283,7 +272,6 @@ const DarkModernPortfolio = () => {
                   download="Yeabsira_Zelalem_CV.pdf"
                   className="inline-block px-6 mt-2 py-3 border border-[#FF4D00] text-[#FF4D00] rounded-full hover:bg-gradient-to-r from-[#FF4D00] to-[#6B0099] hover:text-white transition-all duration-300 glitter-shadow"
                 >
-                  {/* <FaDownload className="inline-block mr-2" /> */}
                   Download CV
                 </a>
               </div>
@@ -291,12 +279,12 @@ const DarkModernPortfolio = () => {
           </div>
         </section>
 
-        <section id="projects" className="py-20">
-          <div className="container mx-auto px-6">
+        <section id="projects" className="py-20 bg-[#0c0c12]">
+          <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-purple-400 glitter-shadow">
               Featured Projects
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {projects.map((project, index) => (
                 <motion.div
                   key={index}
@@ -308,10 +296,10 @@ const DarkModernPortfolio = () => {
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-40 object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-orange-300 group-hover:text-[#FF4D00] transition-colors duration-300">
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold mb-2 text-orange-300 group-hover:text-[#FF4D00] transition-colors duration-300">
                       {project.title}
                     </h3>
                     <p className="text-gray-300 mb-4">{project.description}</p>
@@ -350,8 +338,8 @@ const DarkModernPortfolio = () => {
           </div>
         </section>
 
-        <section id="skills" className="py-20 bg-black/60">
-          <div className="container mx-auto px-6">
+        <section id="skills" className="py-20 bg-black">
+          <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099] glitter-shadow">
               Skills & Expertise
             </h2>
@@ -367,7 +355,7 @@ const DarkModernPortfolio = () => {
                   <h3 className="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099]">
                     {skillSet.category}
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-2 gap-x-4">
                     {skillSet.skills.map((skill, skillIndex) => (
                       <li key={skillIndex} className="flex items-center">
                         <span className="w-2 h-2 bg-gradient-to-r from-[#FF4D00] to-[#6B0099] rounded-full mr-2"></span>
@@ -381,8 +369,8 @@ const DarkModernPortfolio = () => {
           </div>
         </section>
 
-        <section id="contact" className="py-20 bg-black/60">
-          <div className="container mx-auto px-6">
+        <section id="contact" className="py-20 bg-[#0c0c12]">
+          <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#FF4D00] to-[#6B0099] glitter-shadow">
               Get In Touch
             </h2>
