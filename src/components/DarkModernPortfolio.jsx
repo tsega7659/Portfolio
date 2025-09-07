@@ -448,11 +448,13 @@ const DarkModernPortfolio = () => {
               </div>
             </div>
           </div>
-        </section>
+   
+     </section>
+//footer part
 
         <footer className="py-8 bg-black/60 backdrop-blur-sm">
           <div className="container mx-auto px-6 text-center">
-            <p className="mb-4">&copy; {new Date().getFullYear()} Yeabsira Zelalem. All rights reserved.</p>
+            <p className="mb-4">&copy; {new Date().getFullYear()} Yeabsira Zelalem. All rights reserved. </p>
             <div className="flex justify-center space-x-4">
               {[
                 { href: "https://github.com/tsega7659", icon: FaGithub },
