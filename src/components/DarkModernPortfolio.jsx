@@ -450,7 +450,6 @@ const DarkModernPortfolio = () => {
           </div>
    
      </section>
-//footer part
 
         <footer className="py-8 bg-black/60 backdrop-blur-sm">
           <div className="container mx-auto px-6 text-center">
