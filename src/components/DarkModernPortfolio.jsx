@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes, FaTelegram, FaPhone, FaMapMarkerAlt, FaDownload } from "react-icons/fa";
 import me from "../assets/me1.jpg";
-import ritta from "../assets/rita.jpg";
+import askaladmin from "../assets/askaladmin.jpg";
 import tsimona from "../assets/tsimona.jpg";
 import askal from "../assets/askal.jpg";
 import planning from "../assets/planner.jpg";
@@ -77,10 +77,19 @@ const DarkModernPortfolio = () => {
       title: "Askal Charity Website",
       description: "A Charity website built with React, Node.js, Express, and MySQL. ",
       image: askal,
-      link: "https://askal-charity-website.vercel.app/",
+      link: "https://askalcharityassociation.org/",
       github: "https://github.com/Yohanamtesfaye/Askal-Charity-Website/",
       languages: ["Node.js", "Express", "MySQL", "React", "Tailwind CSS"],
     },
+    {
+      title: "Askal Admin Dashboard",
+      description: "An admin dashboard for managing charity operations, built with Node, React and Tailwind CSS.",
+      image: askaladmin,
+      // link: "https://ritta-flowers.netlify.app/",
+      // github: "https://github.com/tsega7659/Ritta_Flowers_React_Excersice",
+      languages: ["React", "Tailwind CSS", "node.js", "Express.js", "MySQL"],
+    },
+   
     {
       title: "Tsimona Books",
       description: "An online bookstore built with React, featuring API integration and responsive design.",
@@ -97,15 +106,7 @@ const DarkModernPortfolio = () => {
       github: "https://github.com/fitiha/aastu-planner",
       languages: ["Next.js", "Tailwind CSS", "Go"],
     },
-    {
-      title: "Ritta Flowers",
-      description: "A React and Tailwind CSS website showcasing a flower shop's products and services.",
-      image: ritta,
-      link: "https://ritta-flowers.netlify.app/",
-      github: "https://github.com/tsega7659/Ritta_Flowers_React_Excersice",
-      languages: ["React", "Tailwind CSS"],
-    },
-   
+    
     
    
      {
