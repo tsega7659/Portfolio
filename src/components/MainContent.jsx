@@ -76,7 +76,6 @@ const MainContent = () => {
                 </div>
             </motion.section>
 
-
             {/* Skills */}
             <motion.section
                 id="skills"
