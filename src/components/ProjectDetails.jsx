@@ -8,6 +8,17 @@ const ProjectDetails = () => {
     const { id } = useParams();
     const project = projects.find(p => p.id === id);
 
+    const renderHighlightedText = (text) => {
+        if (!text) return null;
+        return text.split('**').map((part, index) =>
+            index % 2 === 1 ? (
+                <span key={index} className="font-md text-black  px-1 rounded">{part}</span>
+            ) : (
+                part
+            )
+        );
+    };
+
     // Scroll to top on mount
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -54,14 +65,14 @@ const ProjectDetails = () => {
 
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Project Overview</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                    {project.description}
+                    {renderHighlightedText(project.description)}
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">My Role</h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
                     <span className="font-bold text-gray-800">{project.role}</span>.
                     {project.roleDescription ? (
-                        <span className="block mt-2">{project.roleDescription}</span>
+                        <span className="block mt-2">{renderHighlightedText(project.roleDescription)}</span>
                     ) : (
                         <span>
                             Responsibilties included designing the user interface, implementing responsive layouts, and integrating backend APIs.

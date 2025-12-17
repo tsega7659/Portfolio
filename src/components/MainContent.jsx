@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import { FaDownload, FaMapMarkerAlt, FaEnvelope, FaPhone, FaCode, FaMobileAlt, FaTools, FaHandsHelping, FaChalkboardTeacher, FaUserFriends } from 'react-icons/fa';
 import ProjectCard from './ProjectCard';
 import cv from "../assets/Yeabsira-Zelalem-Tilahun-Resume.pdf";
@@ -12,6 +13,8 @@ const MainContent = () => {
         email: "",
         message: "",
     });
+    const formRef = useRef();
+    const [status, setStatus] = useState({ type: '', message: '' });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -20,10 +23,23 @@ const MainContent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const to = "yeabsirazelalem791@gmail.com";
-        const subject = `New Message from ${formData.name}`;
-        const body = `${formData.message}\n\nFrom: ${formData.name} <${formData.email}>`;
-        window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        setStatus({ type: 'loading', message: 'Sending...' });
+
+        emailjs.sendForm(
+            'service_60ye6vo',
+            'template_l2bt46v',
+            formRef.current,
+            'CCRbcM7aePYR1UMgg'
+        )
+            .then((result) => {
+                console.log('Email successfully sent!', result.text);
+                setStatus({ type: 'success', message: 'Message sent successfully!' });
+                setFormData({ name: "", email: "", message: "" });
+                setTimeout(() => setStatus({ type: '', message: '' }), 5000);
+            }, (error) => {
+                console.log('Failed to send email:', error.text);
+                setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+            });
     };
 
     const itemVariants = {
@@ -91,7 +107,7 @@ const MainContent = () => {
                         {
                             category: "Web Development",
                             icon: FaCode,
-                            skills: ["React.js", "Next.js", "Tailwind CSS", "Node.js", "Express.js", "MySQL", "HTML5", "CSS3"]
+                            skills: ["React.js", "Next.js", "Tailwind CSS","BootStrap", "Node.js", "Express.js", "MySQL", "HTML5", "CSS3", "JavaScript (ES6+)"]
                         },
                         {
                             category: "Mobile App Development",
@@ -199,7 +215,7 @@ const MainContent = () => {
                             </div>
                         </div>
                     </div>
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                         <div className="grid gap-4">
                             <input
                                 type="text"
@@ -233,8 +249,13 @@ const MainContent = () => {
                             type="submit"
                             className="w-full md:w-auto px-10 py-3 bg-gray-800 text-white font-bold uppercase tracking-widest hover:bg-gray-600 transition-colors"
                         >
-                            Send Message
+                            {status.type === 'loading' ? 'Sending...' : 'Send Message'}
                         </button>
+                        {status.message && (
+                            <p className={`text-sm ${status.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                                {status.message}
+                            </p>
+                        )}
                     </form>
                 </div>
             </motion.section>
