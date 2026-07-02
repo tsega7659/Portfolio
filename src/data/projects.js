@@ -30,7 +30,41 @@ import yeneta5 from "../assets/yeneta5.jpg";
 import yeneta6 from "../assets/yeneta6.jpg";
 
 
+import addisbike1 from "../assets/addisbike1.jpg";
+import addisbike2 from "../assets/addisbike2.jpg";
+import addisbike3 from "../assets/addisbike3.jpg";
+
+import abritech1 from "../assets/abritech1.jpg";
+import abritech2 from "../assets/abritech2.jpg";
+import abritech3 from "../assets/abritech3.jpg";
+import abritech4 from "../assets/abrietch4.jpg";
+
+
 export const projects = [
+    {
+        id: "abritech-lms",
+        title: "AbriTech LMS",
+        description: "A full-stack LMS with role-based portals for students, parents, instructors, and administrators. It handles course enrollment, grading, analytics, and payments.",
+        role: "Full-Stack Developer",
+        roleDescription: "Built a **full-stack LMS** with role-based portals for all users. Integrated **Chapa payments**, course enrollment, assignments, grading, analytics, and comprehensive admin management for a live **production platform**.",
+        image: abritech1,
+        gallery: [abritech1, abritech2, abritech3, abritech4],
+        link: "https://www.abritechet.com/",
+        github: "",
+        languages: ["React", "Node.js", "Express.js", "PostgreSQL", "Tailwind CSS"],
+    },
+    {
+        id: "addis-bike-admin",
+        title: "Addis Bike Admin Dashboard",
+        description: "A responsive admin dashboard for fleet, user, maintenance, and report management featuring real-time tracking.",
+        role: "Frontend Developer",
+        roleDescription: "Designed in **Figma** and developed a responsive admin dashboard. Implemented **WebSocket-based real-time bike tracking**, **payment integration**, and role-based administration for operational monitoring.",
+        image: addisbike1,
+        gallery: [addisbike1, addisbike2, addisbike3],
+        link: "#",
+        github: "",
+        languages: ["React", "TypeScript", "Tailwind CSS", "Figma"],
+    },
     {
         id: "askal-charity",
         title: "Askal Charity Website",
