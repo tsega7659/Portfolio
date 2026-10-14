@@ -125,17 +125,6 @@ export const projects = [
         github: "https://github.com/tsega7659/BOOK_RENTING",
         languages: ["React", "Tailwind CSS", "RESTful API"],
     },
-    {
-        id: "planning-system",
-        title: "Planning Management System",
-        description: "A comprehensive system for managing planning and reporting process. ",
-        role: "Frontend Developer",
-        roleDescription: "Contributed to the **frontend application in Next.js**. I worked on implementing core business logic for the **planning modules and created dynamic reports** for data visualization.",
-        image: planning,
-        gallery: [planning, planning, planning],
-        link: "#",
-        github: "https://github.com/fitiha/aastu-planner",
-        languages: ["Next.js", "Tailwind CSS", "Go"],
-    },
+    
 
 ];
