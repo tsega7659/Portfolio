@@ -39,6 +39,14 @@ import abritech2 from "../assets/abritech2.jpg";
 import abritech3 from "../assets/abritech3.jpg";
 import abritech4 from "../assets/abrietch4.jpg";
 
+import lebamsew1 from "../assets/lebamsew1.jpg";
+import lebamsew2 from "../assets/lebamsew2.jpg";
+import lebamsew3 from "../assets/lebamsew3.jpg";
+
+import eakbcwda1 from "../assets/eakbcwda1.jpg";
+import eakbcwda2 from "../assets/eakbcwda2.jpg";
+import eakbcwda3 from "../assets/eakbcwda3.jpg";
+
 
 export const projects = [
     {
@@ -125,6 +133,29 @@ export const projects = [
         github: "https://github.com/tsega7659/BOOK_RENTING",
         languages: ["React", "Tailwind CSS", "RESTful API"],
     },
-    
+    {
+        id: "lebam-sew-ministry",
+        title: "Lebam Sew Ministry",
+        description: "A Gospel-centered ministry website for ላበም ሰው Ministry, designed to connect communities through outreach programs, events, and transformational impact. The site features program listings, upcoming events, and a membership call-to-action.",
+        role: "WordPress Developer",
+        roleDescription: "**Designed and developed the entire website using WordPress**. Built custom page layouts showcasing the ministry's **mission, vision, and core values**. Implemented sections for **upcoming events**, programs, impact stats, and community outreach. Ensured the site is responsive and user-friendly for church members and volunteers.",
+        image: lebamsew1,
+        gallery: [lebamsew1, lebamsew2, lebamsew3],
+        link: "https://lebamsew.org/",
+        github: "",
+        languages: ["WordPress", "Elementor", "CSS", "PHP"],
+    },
+    {
+        id: "eakbc-dc",
+        title: "EAKBC-DC Website",
+        description: "A professional NGO website for the Ethiopian Addis Kidan Baptist Church Development Commission (EAKBC-DC), an organization working on holistic transformation and poverty alleviation across 8 regions of Ethiopia.",
+        role: "WordPress Developer",
+        roleDescription: "**Designed and developed the full website using WordPress**. Built structured pages covering the organization's **mission, vision, objectives, and core programs** including Agriculture & Food Security, Livelihood Enhancement & Women Empowerment, Disaster Response & Rehabilitation, and WASH & Health. Showcased impact stats (**30,000+ direct beneficiaries**, **175,000+ indirect beneficiaries**) and a gallery section. Optimized the site for clarity and professional NGO presentation.",
+        image: eakbcwda1,
+        gallery: [eakbcwda1, eakbcwda2, eakbcwda3],
+        link: "https://eakbcwda.org/",
+        github: "",
+        languages: ["WordPress", "Elementor", "CSS", "PHP"],
+    },
 
 ];
