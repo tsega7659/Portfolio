@@ -13,7 +13,7 @@ const SkillsSection = () => {
             category: "Web Development",
             icon: FaCode,
             color: "text-accentCyan",
-            skills: ["React.js", "Next.js", "Tailwind CSS", "BootStrap", "Node.js", "Express.js", "MySQL", "PostgreSQL", "MongoDB", "HTML5", "CSS3", "JavaScript (ES6+)", "Python", "Wordpress", "PHP"]
+            skills: ["React.js", "Next.js", "Tailwind CSS", "BootStrap", "Node.js", "Express.js", "MySQL", "PostgreSQL", "MongoDB", "HTML5", "CSS3", "JavaScript (ES6+)", "Python", "Wordpress", "Elementor", "PHP"]
         },
         {
             category: "Mobile App Development",
